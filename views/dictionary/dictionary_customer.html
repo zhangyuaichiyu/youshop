@@ -1,0 +1,81 @@
+{% extends "../common/layout.html" %}
+{% block head %}
+  <link rel="stylesheet" href="/css/dictionary.css">
+{% endblock %}
+{% block operate %}
+  <div class="rg-operate">
+    <i class="icon icon-add"></i>
+    <span>新建客户</span>
+  </div>
+{% endblock %}
+{% block body %}
+  <!-- 删除确认框 -->
+  <div class="confirm" type="">
+    <i class="icon icon-close delete-quit"></i>
+    <p>是否确认删除该条记录？</p>
+    <button type="button" class="delete-confirm btn btn-save">确认</button>
+    <button type="button" class="delete-quit btn btn-quit">取消</button>
+  </div>
+  <!-- 新建客户 -->
+  <form class="customer-form add-form">
+    <div class="form-title">
+      <span class="title-name" type="">新建客户</span>
+      <i class="icon icon-close customer-quit"></i>
+    </div>
+    <div class="form-content">
+      <div class="form-item">
+        <label for="">客户编号</label>
+        <input type="hidden" id="customerId" name="id" value="">
+        <input type="text" id="customerCode" name="code" placeholder="请输入客户编号（如：KH001）">
+      </div>
+      <div class="form-item">
+        <label for="">客户名称</label>
+        <input type="text" id="customerName" name="name" placeholder="请输入客户名称">
+      </div>
+      <div class="form-item">
+        <label for="">联系人</label>
+        <input type="text" id="customerContact" name="contact" placeholder="请输入联系人">
+      </div>
+      <div class="form-item">
+        <label for="">联系电话</label>
+        <input type="text" id="customerPhone" name="phone" placeholder="请输入联系电话">
+      </div>
+      <div class="form-item">
+        <label for="">地址</label>
+        <input type="text" id="customerAddress" name="address" placeholder="请输入地址">
+      </div>
+      <div class="form-item">
+        <label for="">排序</label>
+        <input type="text" id="customerSort" name="sort" placeholder="请输入排序数字">
+      </div>
+      <div class="form-item bottom40">
+        <label for="">备注</label>
+        <input type="text" id="customerRemark" name="remark" placeholder="请输入备注">
+      </div>
+      <div class="form-item">
+        <button type="button" class="customer-save btn btn-save">保存</button>
+        <button type="button" class="customer-quit btn btn-quit">取消</button>
+      </div>
+    </div>
+  </form>
+  <!-- 数据列表 -->
+  <table class="data-lists">
+    <thead>
+      <tr>
+        <th>序号</th>
+        <th>客户编号</th>
+        <th>客户名称</th>
+        <th>联系人</th>
+        <th>联系电话</th>
+        <th>地址</th>
+        <th>排序</th>
+        <th>备注</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+{% endblock %}
+{% block js %}
+  <script type="text/javascript" src="/js/dictionary_customer.js"></script>
+{% endblock %}
