@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/base.css">
     <link rel="stylesheet" href="/css/public.css">
     {% block head %}{% endblock %}
   </head>
@@ -25,10 +26,12 @@
           </div>
         </div>
       </div>
-      {% include "./footer.html" %}
+      <!-- {% include "./footer.html" %} -->
     </div>
-    <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../../js/public.js"></script>
+    <!-- <script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/public.js"></script>
     {% block js %}{% endblock %}
   </body>
 

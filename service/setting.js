@@ -104,15 +104,12 @@ module.exports = {
       .then(() => {
         data = {
           status: true,
-          data: {
-            type: 'linkAccount'
-          },
           msg: '关联成功'
         }
       }).catch(() => {
         data = {
           status: false,
-          msg: '关联请求失败，请稍后重试'
+          msg: '增加关联记录失败'
         }
       })
     return data;
@@ -158,13 +155,13 @@ module.exports = {
         if (res.length > 0) {
           data = {
             status: true,
-            data:res,
-            msg: '关联过'
+            data: res,
+            msg: '关联列表记录'
           }
         } else {
           data = {
             status: false,
-            msg: '没关联过'
+            msg: '没有关联记录'
           }
         }
 
